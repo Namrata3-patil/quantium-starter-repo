@@ -32,8 +32,9 @@ app.layout = html.Div(
             },
             children=[
                 
-                # Header Section
+                # Header Section (id added for testing)
                 html.H1(
+                    id="app-header",
                     children="Soul Foods Sales Visualizer",
                     style={'textAlign': 'center', 'color': '#2c3e50', 'marginBottom': '10px', 'fontWeight': '600'}
                 ),
@@ -126,6 +127,6 @@ def update_graph(selected_region):
     
     return fig
 
-# Run the server locally
+# Run the server locally using the modern .run() syntax
 if __name__ == "__main__":
     app.run(debug=True)
